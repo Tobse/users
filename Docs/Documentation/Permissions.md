@@ -13,7 +13,7 @@ You can find the permission rule syntax at [CakeDC/auth documentation.](https://
 
 I want to allow access to public actions (non-logged user)
 ----------------------------------------------------------
-To allow access to public actions (that does not requires a looged) we need to include a new rule at config/permissions.php
+To allow access to public actions (that does not requires a logged) we need to include a new rule at config/permissions.php
 using the 'bypassAuth' key.
 
 ```php
@@ -23,7 +23,7 @@ return [
         //...... all other rules
         [
             'controller' => 'Pages',
-            'action' => ['home', 'contact', 'projects']
+            'action' => ['display']
             'bypassAuth' => true,
         ],
     ],
